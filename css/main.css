@@ -1,3 +1,76 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ffffff;
+  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+}
+
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-right: 34px;
+    padding-left: 34px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1280px;
+    padding-right: 115px;
+    padding-left: 115px;
+  }
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin: 0;
+}
+
 .contacts-item {
   width: 220px;
   background: #ffffff;
@@ -90,7 +163,273 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.5;
   color: #907e82;
+}
+
+.contacts-button .effect-button {
+  border-radius: 44px;
+}
+
+.contacts-button .effect-button.franchise {
+  font-size: 16px;
+  line-height: 1.31;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  padding-right: 30px;
+  padding-left: 35px;
+  border: none;
+}
+
+.contacts-button .effect-button.franchise svg {
+  width: 7px;
+  height: 10px;
+  margin-left: 14px;
+}
+
+.contacts-button .effect-button.location {
+  padding-top: 16px;
+  padding-bottom: 17px;
+  padding-right: 17px;
+  padding-left: 21px;
+  margin-bottom: 10px;
+}
+
+.contacts-button .effect-button.location svg {
+  width: 6px;
+  height: 10px;
+  margin-left: 11px;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts {
+    padding-bottom: 29px;
+    background-color: #fff5f6;
+  }
+  .contacts .container {
+    position: relative;
+    bottom: 84px;
+    min-width: 320px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .contacts-list {
+    margin-bottom: 81px;
+  }
+  .contacts-item {
+    padding-top: 43px;
+    padding-right: 20px;
+    padding-bottom: 43px;
+    padding-left: 20px;
+  }
+  .contacts-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 768px) {
+  .contacts-button {
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .contacts-button .effect-button:first-child {
+    margin-right: 15px;
+  }
+  .contacts-button .effect-button.franchise {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 37px;
+    padding-left: 37px;
+  }
+  .contacts-button .effect-button.location {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 33px;
+    padding-left: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    padding-bottom: 68px;
+    background-color: #fff5f6;
+  }
+  .contacts .container {
+    position: relative;
+    bottom: 90px;
+  }
+  .contacts-list {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: -10px;
+    margin-bottom: 81px;
+  }
+  .contacts-item {
+    width: calc((100% - 6 * 10px) / 3);
+    margin: 10px;
+    padding-top: 50px;
+    padding-right: 32px;
+    padding-bottom: 50px;
+    padding-left: 31px;
+  }
+  .contacts-title_cafe,
+  .contacts-title_food-truck {
+    border-radius: 6px;
+    padding: 0px 15px;
+    font-size: 16px;
+    line-height: 1.88;
+    margin-bottom: 30px;
+  }
+  .contacts-city {
+    font-size: 14px;
+    line-height: 1.86;
+    margin-bottom: 14px;
+  }
+  .contacts-text {
+    font-size: 14px;
+    line-height: 1.64;
+  }
+  .contacts-text::after {
+    display: block;
+    content: '';
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 157px;
+    height: 0;
+  }
+  .contacts-timer-day {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+  .contacts-timer-time {
+    font-size: 14px;
+    line-height: 1.86;
+    margin: 0;
+  }
+  .contacts-time-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .contacts-time-item:last-child::after {
+    content: '';
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 157px;
+    height: 0;
+  }
+  .contacts-location-tel,
+  .contacts-location-mail {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-button .effect-button {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contacts-button .effect-button.franchise {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    padding-bottom: 55px;
+  }
+  .contacts .container {
+    position: relative;
+    bottom: 110px;
+  }
+  .contacts-list {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: -15px;
+    margin-bottom: 86px;
+  }
+  .contacts-item {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+    padding-top: 52px;
+    padding-right: 44px;
+    padding-bottom: 61px;
+    padding-left: 43px;
+  }
+  .contacts-title_cafe,
+  .contacts-title_food-truck {
+    border-radius: 6px;
+    padding: 0px 15px;
+    font-size: 16px;
+    line-height: 1.88;
+    margin-bottom: 32px;
+  }
+  .contacts-city {
+    font-size: 16px;
+    line-height: 1.88;
+  }
+  .contacts-desc {
+    font-size: 16px;
+    line-height: 1.81;
+  }
+  .contacts-desc::after {
+    content: '';
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 234px;
+  }
+  .contacts-timer-day {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.04em;
+  }
+  .contacts-timer-time {
+    font-size: 16px;
+    line-height: 1.88;
+    margin: 0;
+  }
+  .contacts-time-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .contacts-time-item:last-child::after {
+    content: '';
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 234px;
+  }
+  .contacts-location-tel,
+  .contacts-location-mail {
+    font-size: 16px;
+    line-height: 1.81;
+  }
+  .contacts-button {
+    flex-wrap: nowrap;
+  }
+  .contacts-button .effect-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contacts-button .effect-button:first-child {
+    margin-right: 15px;
+  }
+  .contacts-button .effect-button.franchise {
+    padding-right: 39px;
+    padding-left: 39px;
+  }
+  .contacts-button .effect-button.franchise svg {
+    fill: #d41443;
+  }
+  .contacts-button .effect-button.location {
+    padding-right: 35px;
+    padding-left: 35px;
+    margin-bottom: 0px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
