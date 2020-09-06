@@ -271,6 +271,11 @@
 @media screen and (min-width: 1200px) {
   .contacts {
     padding-bottom: 55px;
+    background-color: $second-background-color;
+    background-image: url('../images/cs/drops-milk.png');
+    background-size: 1282px 534px;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     & .container {
       position: relative;
